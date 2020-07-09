@@ -1,12 +1,27 @@
 <template>
   <div class="hello">
-    <h1>{{'李晴'+ msg }}</h1>
+    <iframe
+      :src="youtobeURL"
+      frameborder="0"
+      allow="autoplay;encrypted-media"
+      allowfullscreen
+      style="width:100%;height:200px;"
+    ></iframe>
+    <input v-model="youtobeURL" />
+    <div v-html="urlurl"></div>
+    <input v-model="urlurl" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'EditPage',
+  data () {
+    return {
+      youtobeURL: '',
+      urlurl: ''
+    }
+  },
   props: {
     msg: String
   }
